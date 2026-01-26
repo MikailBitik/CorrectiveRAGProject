@@ -1,0 +1,6 @@
+.env
+.chroma/
+graph/chains/.chroma/
+.idea/
+.venv/
+__pycache__/
