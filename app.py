@@ -6,7 +6,7 @@ load_dotenv()
 
 st.set_page_config(page_title="Corrective RAG", page_icon="🤖")
 
-lang = st.selectbox("Dil / Language", ["Türkçe", "English"], width=200)
+lang = st.selectbox("Dil / Language", ["Türkçe", "English"])
 if lang == "Türkçe":
     title = "Corrective RAG"
     subtitle = "Sana nasıl yardımcı olabilirim?"
