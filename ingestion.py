@@ -2,8 +2,7 @@ from dotenv import load_dotenv
 from langchain_text_splitters import  RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import OllamaEmbeddings
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_huggingface import HuggingFaceEndpointEmbeddings
 
 load_dotenv()
 
@@ -24,7 +23,7 @@ text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
 splits = text_splitter.split_documents(docs_list)
 
 #embedding = OllamaEmbeddings(model="nomic-embed-text")
-embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
+embedding = HuggingFaceEndpointEmbeddings(model="sentence-transformers/all-MiniLM-L6-v2")
 
 vectorstore = Chroma.from_documents(
     documents=splits,

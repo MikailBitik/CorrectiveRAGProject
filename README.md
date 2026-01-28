@@ -27,7 +27,7 @@ This project implements a **Corrective Retrieval-Augmented Generation (CRAG)** s
 
 *   **Orchestration**: LangGraph
 *   **LLM**: DeepSeek (via `DeepSeek-V3` / `deepseek-chat`)
-*   **Embeddings**: Google Gemini (`models/text-embedding-004`)
+*   **Embeddings**: Hugging Face (`sentence-transformers/all-MiniLM-L6-v2`)
 *   **Vector Database**: ChromaDB
 *   **Web Search**: Tavily Search API
 *   **UI**: Streamlit
@@ -54,7 +54,7 @@ Verify the application directly on the web:
     Create a `.env` file in the root directory and add your API keys:
     ```env
     DEEPSEEK_API_KEY=your_deepseek_key
-    GOOGLE_API_KEY=your_google_key
+    HF_TOKEN=your_huggingface_token #for using embedding models from huggingface
     TAVILY_API_KEY=your_tavily_key
     LANGCHAIN_API_KEY=your_langchain_key # Optional: for LangSmith tracing
     LANGCHAIN_TRACING_V2=true           # Optional
